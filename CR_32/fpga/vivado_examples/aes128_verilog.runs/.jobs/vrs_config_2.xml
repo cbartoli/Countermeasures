@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="synth_100t" LaunchDir="C:/Users/DPAWS/Documents/CHRIS/Countermeasures/CR_32/fpga/vivado_examples/aes128_verilog.runs/synth_100t" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="impl_100t" LaunchDir="C:/Users/DPAWS/Documents/CHRIS/Countermeasures/CR_32/fpga/vivado_examples/aes128_verilog.runs/impl_100t" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_100t"/>
+	</Run>
+</Runs>
+

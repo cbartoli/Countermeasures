@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Jun 19 22:23:59 2018
+# Process ID: 9896
+# Current directory: F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8528 F:\Documents\Countermeasures\CR\fpga\vivado_examples\aes128_verilog\aes128_verilog.xpr
+# Log file: F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/vivado.log
+# Journal file: F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files {F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/new/board.v F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/new/clk_randomizer.v}
+update_compile_order -fileset sources_1
+add_files F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+add_files -norecurse F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+import_files
+export_ip_user_files -of_objects  [get_files F:/Documents/Countermeasures/CR/fpga/common/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -reset -force -quiet
+remove_files  F:/Documents/Countermeasures/CR/fpga/common/ip/clk_wiz_0/clk_wiz_0.xci
+update_compile_order -fileset sources_1
+add_files {F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/new/board.v F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/imports/fpga/common/registers/registers.v F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/imports/fpga/cryptosrc/aes_googlevault/aes_ks.v F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/imports/fpga/cryptosrc/aes_googlevault/aes_core.v F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/imports/fpga/cryptosrc/aes_googlevault/aes_sbox.v F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/new/clk_randomizer.v F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/imports/fpga/common/cw305_top.v F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/imports/fpga/common/usb_module.v}
+export_ip_user_files -of_objects  [get_files  F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -lib_map_path [list {modelsim=F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.cache/compile_simlib/modelsim} {questa=F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.cache/compile_simlib/questa} {riviera=F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.cache/compile_simlib/riviera} {activehdl=F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.cache/compile_simlib/activehdl}] -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_100t
+launch_runs synth_100t -jobs 4
+wait_on_run synth_100t
+launch_runs impl_35t -to_step write_bitstream -jobs 4
+wait_on_run impl_35t
+reset_run synth_35t
+launch_runs impl_100t -to_step write_bitstream -jobs 4
+wait_on_run impl_100t

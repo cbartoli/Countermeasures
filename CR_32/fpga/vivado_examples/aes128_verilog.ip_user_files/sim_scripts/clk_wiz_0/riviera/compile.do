@@ -8,10 +8,10 @@ vmap xil_defaultlib riviera/xil_defaultlib
 vmap xpm riviera/xpm
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../ipstatic" "+incdir+../../../ipstatic" \
-"F:/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 
 vcom -work xpm -93 \
-"F:/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_VCOMP.vhd" \
+"C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../ipstatic" "+incdir+../../../ipstatic" \
 "../../../../aes128_verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
