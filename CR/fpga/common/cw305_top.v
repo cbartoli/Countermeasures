@@ -98,7 +98,7 @@ module cw305_top(
     wire crypt_ready;
     wire crypt_start;
     wire crypt_done;
-    wire rand_crypt_clk;
+   // wire rand_crypt_clk;
     
     /******* USB Interface ****/
     wire [1024*8-1:0] memory_input;
@@ -140,7 +140,7 @@ module cw305_top(
         .crypt_type(8'h02),
         .crypt_rev(8'h03),
         
-        .cryptoclk(crypt_clk),
+        .rand_cryptoclk(crypt_clk),
         .key(crypt_key),
         .textin(crypt_textout),
         .cipherout(crypt_cipherin),
@@ -152,16 +152,16 @@ module cw305_top(
     );
   
   /************ RANDOMIZE CRYPT CLOCK ************/
-  clk_randomizer clk_rand(
+/*  clk_randomizer clk_rand(
         .clk_in(crypt_clk),
         .clk_rand(rand_crypt_clk)
   );
-  
+  */
   /* Block interface is used by the IP Catalog. If you are using block-based
      design define USE_BLOCK_INTERFACE in board.v .
   */
 `ifdef USE_BLOCK_INTERFACE
-    assign crypto_clk = rand_crypt_clk;
+    assign crypto_clk = crypt_clk;
     assign crypto_rst = crypt_init;
     assign crypto_keyout = crypt_key;
     assign crypto_textout = crypt_textout;
@@ -190,7 +190,7 @@ module cw305_top(
    wire aes_load;
    wire aes_busy;
   
-   assign aes_clk = rand_crypt_clk;
+   assign aes_clk = crypt_clk;
    assign aes_key = crypt_key;
    assign aes_pt = crypt_textout;
    assign crypt_cipherin = aes_ct;

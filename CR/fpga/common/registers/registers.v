@@ -117,7 +117,7 @@ module registers(
     input wire [7:0]     crypt_rev,
     
     /* Interface to Crypto Core */
-    output wire          cryptoclk,
+    output wire          rand_cryptoclk,
     output wire [KEY_WIDTH-1:0]  key,
     output wire [PT_WIDTH-1:0]  textin,
     input  wire [PT_WIDTH-1:0]  textout,
@@ -159,6 +159,7 @@ module registers(
     wire [PT_WIDTH-1:0] reg_crypt_textin;
     reg [CT_WIDTH-1:0] reg_crypt_cipherout;
     wire [CT_WIDTH-1:0] reg_crypt_cipherin;
+    wire cryptoclk, buf_cryptoclk;
     
     assign user_led = reg_led[0];
     
@@ -170,25 +171,25 @@ module registers(
     assign cipherin = reg_crypt_cipherin;
     
     reg done_old;
-    always @(posedge cryptoclk) begin
+    always @(posedge rand_cryptoclk) begin
         done_old <= done & done_edge_sensitive;
     end
     
-    always @(posedge cryptoclk) begin        
+    always @(posedge rand_cryptoclk) begin        
         if ((done) && (done_old == 1'b0)) begin
             reg_crypt_cipherout <= cipherout;
             reg_crypt_textout   <= textout;
         end
     end
     
-    always @(posedge cryptoclk) begin
+    always @(posedge rand_cryptoclk) begin
         if (start_int == 1'b1)
             reg_crypt_status[0] <= 1'b0;
         else if (done == 1'b1)
             reg_crypt_status[0] <= 1'b1;       
     end
     
-    always @(posedge cryptoclk) begin
+    always @(posedge rand_cryptoclk) begin
         if ((reg_crypt_settings[0] | exttrigger_in) == 1'b1) begin
             start_int <= ~start_int2 & (reg_crypt_settings[0] | exttrigger_in);
             start_int2 <= 1'b1;               
@@ -246,9 +247,21 @@ module registers(
        .S1(cclk_src_is_ext)  // 1-bit input: Clock select for I1
     );    
     
+    /****** Add BUFH because we'll have cascading BUFG from the above mux and below randoizer ******/
+    BUFH BUFH_0 (
+        .I(cryptoclk),
+        .O(buf_cryptoclk)
+    );
+    
+     /************ RANDOMIZE CRYPT CLOCK ************/
+     clk_randomizer clk_rand(
+           .clk_in(buf_cryptoclk),
+           .clk_rand(rand_cryptoclk)
+     );
+    
     ODDR CWOUT_ODDR (
        .Q(cw_clkout),   // 1-bit DDR output
-       .C(cryptoclk),   // 1-bit clock input
+       .C(rand_cryptoclk),   // 1-bit clock input
        .CE(cclk_output_ext), // 1-bit clock enable input
        .D1(1'b1), // 1-bit data input (positive edge)
        .D2(1'b0), // 1-bit data input (negative edge)

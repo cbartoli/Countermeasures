@@ -30,18 +30,19 @@ set_property target_language Verilog [current_project]
 set_property ip_cache_permissions disable [current_project]
 set_property include_dirs F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/new [current_fileset]
 read_verilog -library xil_defaultlib {
-  F:/Documents/Countermeasures/CR/fpga/cryptosrc/aes_googlevault/aes_core.v
-  F:/Documents/Countermeasures/CR/fpga/cryptosrc/aes_googlevault/aes_ks.v
-  F:/Documents/Countermeasures/CR/fpga/cryptosrc/aes_googlevault/aes_sbox.v
-  F:/Documents/Countermeasures/CR/fpga/common/new/clk_randomizer.v
-  F:/Documents/Countermeasures/CR/fpga/common/registers/registers.v
-  F:/Documents/Countermeasures/CR/fpga/common/usb_module.v
-  F:/Documents/Countermeasures/CR/fpga/common/cw305_top.v
+  F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/imports/fpga/cryptosrc/aes_googlevault/aes_core.v
+  F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/imports/fpga/cryptosrc/aes_googlevault/aes_ks.v
+  F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/imports/fpga/cryptosrc/aes_googlevault/aes_sbox.v
+  F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/new/clk_randomizer.v
+  F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/imports/fpga/common/registers/registers.v
+  F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/imports/fpga/common/usb_module.v
+  F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/new/board.v
+  F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/imports/fpga/common/cw305_top.v
 }
-read_ip -quiet F:/Documents/Countermeasures/CR/fpga/common/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all f:/Documents/Countermeasures/CR/fpga/common/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all f:/Documents/Countermeasures/CR/fpga/common/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all f:/Documents/Countermeasures/CR/fpga/common/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all f:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all f:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all f:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -51,8 +52,8 @@ set_property used_in_implementation false [get_files -all f:/Documents/Counterme
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc F:/Documents/Countermeasures/CR/fpga/common/cw305_main.xdc
-set_property used_in_implementation false [get_files F:/Documents/Countermeasures/CR/fpga/common/cw305_main.xdc]
+read_xdc F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/constrs_1/imports/common/cw305_main.xdc
+set_property used_in_implementation false [get_files F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/constrs_1/imports/common/cw305_main.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

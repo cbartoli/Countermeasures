@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_100t" LaunchPart="xc7a100tftg256-2" LaunchTime="1529432118">
+<GenRun Id="synth_100t" LaunchPart="xc7a100tftg256-2" LaunchTime="1529462080">
   <File Type="PA-TCL" Name="cw305_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="cw305_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="cw305_top_reports.tcl"/>
@@ -11,63 +11,82 @@
   <File Type="VDS-TIMING-PB" Name="cw305_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../../common/ip/clk_wiz_0/clk_wiz_0.xci">
+    <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../cryptosrc/aes_googlevault/aes_core.v">
+    <File Path="$PSRCDIR/sources_1/imports/fpga/cryptosrc/aes_googlevault/aes_core.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../cryptosrc/aes_googlevault/aes_core.v"/>
+        <Attr Name="ImportTime" Val="1529431751"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/fpga/cryptosrc/aes_googlevault/aes_ks.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../cryptosrc/aes_googlevault/aes_ks.v"/>
+        <Attr Name="ImportTime" Val="1529431751"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/fpga/cryptosrc/aes_googlevault/aes_sbox.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../cryptosrc/aes_googlevault/aes_sbox.v"/>
+        <Attr Name="ImportTime" Val="1529431751"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clk_randomizer.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../cryptosrc/aes_googlevault/aes_ks.v">
+    <File Path="$PSRCDIR/sources_1/imports/fpga/common/registers/registers.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../common/registers/registers.v"/>
+        <Attr Name="ImportTime" Val="1529461205"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../cryptosrc/aes_googlevault/aes_sbox.v">
+    <File Path="$PSRCDIR/sources_1/imports/fpga/common/usb_module.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../common/new/clk_randomizer.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../common/registers/registers.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../common/usb_module.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../common/cw305_top.v">
-      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../common/usb_module.v"/>
+        <Attr Name="ImportTime" Val="1529431751"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/board.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/fpga/common/cw305_top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../common/cw305_top.v"/>
+        <Attr Name="ImportTime" Val="1529461205"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../common/new/clk_randomizer.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -83,14 +102,16 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PPRDIR/../../common/cw305_main.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/common/cw305_main.xdc">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../common/cw305_main.xdc"/>
+        <Attr Name="ImportTime" Val="1529431751"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PPRDIR/../../common/cw305_main.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/common/cw305_main.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

@@ -5,8 +5,8 @@
   "F:/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../../../../common/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
-  "../../../../../../common/ip/clk_wiz_0/clk_wiz_0.v" \
+  "../../../../aes128_verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+  "../../../../aes128_verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

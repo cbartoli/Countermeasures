@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:F:/Documents/Countermeasures/CR/fpga/common/cw305_main.xdc rfile:../../../../../common/cw305_main.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:F:/Documents/Countermeasures/CR/fpga/vivado_examples/aes128_verilog/aes128_verilog.srcs/constrs_1/imports/common/cw305_main.xdc rfile:../../../aes128_verilog.srcs/constrs_1/imports/common/cw305_main.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T2 [get_ports led1]
 set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ} [current_design]

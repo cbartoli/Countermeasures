@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Tue Jun 19 14:20:11 2018
+| Date         : Tue Jun 19 22:39:26 2018
 | Host         : JUPITER running 64-bit major release  (build 9200)
 | Command      : report_utilization -file cw305_top_utilization_synth.rpt -pb cw305_top_utilization_synth.pb
 | Design       : cw305_top
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 2291 |     0 |     63400 |  3.61 |
-|   LUT as Logic          | 2291 |     0 |     63400 |  3.61 |
+| Slice LUTs*             | 2298 |     0 |     63400 |  3.62 |
+|   LUT as Logic          | 2298 |     0 |     63400 |  3.62 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |  851 |     0 |    126800 |  0.67 |
-|   Register as Flip Flop |  851 |     0 |    126800 |  0.67 |
+| Slice Registers         |  874 |     0 |    126800 |  0.69 |
+|   Register as Flip Flop |  874 |     0 |    126800 |  0.69 |
 |   Register as Latch     |    0 |     0 |    126800 |  0.00 |
 | F7 Muxes                |   14 |     0 |     31700 |  0.04 |
 | F8 Muxes                |    1 |     0 |     15850 | <0.01 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 2     |          Yes |         Set |            - |
-| 849   |          Yes |       Reset |            - |
+| 872   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -118,7 +118,7 @@ Table of Contents
 | MMCME2_ADV |    0 |     0 |         6 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |         6 |  0.00 |
 | BUFMRCE    |    0 |     0 |        12 |  0.00 |
-| BUFHCE     |    6 |     0 |        96 |  6.25 |
+| BUFHCE     |    7 |     0 |        96 |  7.29 |
 | BUFR       |    0 |     0 |        24 |  0.00 |
 +------------+------+-------+-----------+-------+
 
@@ -147,19 +147,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     | 1524 |                 LUT |
-| FDRE     |  849 |        Flop & Latch |
-| LUT4     |  425 |                 LUT |
-| LUT5     |  273 |                 LUT |
-| LUT3     |  217 |                 LUT |
-| LUT2     |   52 |                 LUT |
+| LUT6     | 1526 |                 LUT |
+| FDRE     |  872 |        Flop & Latch |
+| LUT4     |  427 |                 LUT |
+| LUT5     |  274 |                 LUT |
+| LUT3     |  219 |                 LUT |
+| LUT2     |   55 |                 LUT |
 | IBUF     |   37 |                  IO |
 | MUXF7    |   14 |               MuxFx |
 | CARRY4   |   13 |          CarryLogic |
 | OBUFT    |    8 |                  IO |
 | BUFGCTRL |    8 |               Clock |
-| LUT1     |    6 |                 LUT |
-| BUFH     |    6 |               Clock |
+| LUT1     |    7 |                 LUT |
+| BUFH     |    7 |               Clock |
 | OBUF     |    5 |                  IO |
 | BUFG     |    4 |               Clock |
 | FDSE     |    2 |        Flop & Latch |

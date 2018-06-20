@@ -14,8 +14,8 @@ vcom -work xpm -64 -93 \
 "F:/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../ipstatic" "+incdir+../../../ipstatic" \
-"../../../../../../common/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
-"../../../../../../common/ip/clk_wiz_0/clk_wiz_0.v" \
+"../../../../aes128_verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+"../../../../aes128_verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"
