@@ -1,0 +1,172 @@
+[Scope Settings]
+[[ChipWhisperer/OpenADC]]
+Connection = NewAE USB (CWLite/CW1200)
+Auto-Refresh DCM Status = True
+[[[ChipWhisperer Rev2]]]
+[[ChipWhisperer/OpenADC]]
+[[[FTDI (SASEBO-W/SAKURA-G)]]]
+Device Serial Number = 
+[[ChipWhisperer/OpenADC]]
+[[[NewAE USB (CWLite/CW1200)]]]
+[[[[ChipWisperer-Lite USB]]]]
+[[ChipWhisperer/OpenADC]]
+[[[Serial Port (LX9)]]]
+Selected Port = 
+[[ChipWhisperer/OpenADC]]
+[[[OpenADC]]]
+[[[[HW Information]]]]
+[[[OpenADC]]]
+[[[[Gain Setting]]]]
+Mode = low
+Setting = 30
+[[[OpenADC]]]
+[[[[Trigger Setup]]]]
+Mode = rising edge
+Timeout (secs) = 2
+Offset = 0
+Pre-Trigger Samples = 0
+Total Samples = 250
+[[[OpenADC]]]
+[[[[Clock Setup]]]]
+[[[[[ADC Clock]]]]]
+Source = EXTCLK x4 via DCM
+Phase Adjust = 0
+[[[[Clock Setup]]]]
+Freq Counter Src = EXTCLK Input
+[[[[[CLKGEN Settings]]]]]
+Input Source = system
+Multiply = 2
+Divide = 1
+Desired Frequency = 192000000
+[[ChipWhisperer/OpenADC]]
+[[[CW Extra]]]
+[[[[CW Extra Settings]]]]
+[[[[[Trigger Pins]]]]]
+Target IO1 (Serial TXD) = False
+Target IO2 (Serial RXD) = False
+Target IO3 (SmartCard Serial) = False
+Target IO4 (Trigger Line) = True
+Collection Mode = OR
+[[[[CW Extra Settings]]]]
+Trigger Module = Basic (Edge/Level)
+Clock Source = Target IO-IN
+Target HS IO-Out = Disabled
+HS-Glitch Out Enable (High Power) = 0
+HS-Glitch Out Enable (Low Power) = 0
+[[[[[Target IOn Pins]]]]]
+Target IO1 = Serial TXD
+Target IO2 = Serial RXD
+Target IO3 = High-Z
+Target IO4 = High-Z
+[[[[CW Extra Settings]]]]
+[[[[[Target IOn GPIO Mode]]]]]
+Target IO1: GPIO = Disabled
+Target IO2: GPIO = Disabled
+Target IO3: GPIO = Disabled
+Target IO4: GPIO = Disabled
+[[[[CW Extra Settings]]]]
+Target Power State = True
+[[[CW Extra]]]
+[[[[Glitch Module]]]]
+Clock Source = Target IO-IN
+Glitch Width (as % of period) = 10
+Glitch Width (fine adjust) = 0
+Glitch Offset (as % of period) = 10
+Glitch Offset (fine adjust) = 0
+Glitch Trigger = Manual
+Single-Shot Arm = After Scope Arm
+Ext Trigger Offset = 0
+Repeat = 1
+Output Mode = Clock XORd
+[Aux Settings]
+[[Frequency Counter]]
+Device = None
+[Aux Settings]
+[[GPIO Toggle]]
+GPIO Pin = TargetIO3
+Standby State = Low
+Toggle Length = 250
+Post-Toggle Delay = 250
+Trigger = Trace Done
+[Aux Settings]
+[[Reset AVR via STK500]]
+STK500.exe Path = C:\Program Files (x86)\Atmel\AVR Tools\STK500\Stk500.exe
+AVR Part = atmega328p
+[Aux Settings]
+[[Reset AVR/XMEGA via CW-Lite]]
+Interface = xmega (PDI)
+Delay (Pre-Arm) = 0
+Delay (Post-Arm) = 0
+Reset Timing = Pre-Arm
+[Trace Settings]
+[[ChipWhisperer/Native]]
+[Trace Settings]
+[[DPAContestv3]]
+[Generic Settings]
+Scope Module = ChipWhisperer/OpenADC
+Target Module = ChipWhisperer CW305 (Artix-7)
+Trace Format = ChipWhisperer/Native
+Auxiliary Module = None
+[[Acquisition Settings]]
+Number of Traces = 15000
+Number of Sets = 1
+Key/Text Pattern = Basic
+[Generic Settings]
+[[Basic]]
+Key = Fixed
+Fixed Encryption Key = 2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C
+Plaintext = Random
+Fixed Plaintext = 49 F4 D0 0D A7 22 3B 5B 8E CB FE E8 3F 4C D0 42
+[Target Settings]
+[[ChipWhisperer CW305 (Artix-7)]]
+[[[PLL Settings]]]
+Enabled = True
+[[[[CLK-SMA (X6)]]]]
+CLK-SMA Enabled = False
+CLK-SMA Source = PLL2
+CLK-SMA Slew Rate = +0nS
+PLL0 Frequency = 9600000.0
+[[[PLL Settings]]]
+[[[[CLK-N13 (FGPA Pin N13)]]]]
+CLK-N13 Enabled = True
+CLK-N13 Source = PLL1
+CLK-N13 Slew Rate = +0nS
+PLL1 Frequency = 10000000.0
+[[[PLL Settings]]]
+[[[[CLK-E12 (FGPA Pin E12)]]]]
+CLK-E12 Enabled = False
+CLK-E12 Source = PLL2
+CLK-E12 Slew Rate = +0nS
+PLL2 Frequency = 12544000.0
+[[[PLL Settings]]]
+[[ChipWhisperer CW305 (Artix-7)]]
+Disable CLKUSB For Capture = True
+Time CLKUSB Disabled for = 50
+CLKUSB Manual Setting = True
+VCC-INT = 1.0
+[[[FPGA Bitstream]]]
+Bitstream File = /mnt/hgfs/CHRIS/Countermeasures/CR_fewerclocks/fpga/vivado_examples/aes128_verilog/aes128_verilog.runs/impl_100t/cw305_top.bit
+[Target Settings]
+[[SAKURA G]]
+Connection via: = Select Interface type...
+USB Serial #: = Press Refresh
+[Target Settings]
+[[SASEBO GII]]
+USB Serial #: = Press Refresh
+[Target Settings]
+[[Simple Serial]]
+Connection = NewAE USB (CWLite/CW1200)
+Key Length (Bytes) = 16
+Input Length (Bytes) = 16
+Output Length (Bytes) = 16
+Init Command = 
+Load Key Command = k$KEY$\n
+Load Input Command = 
+Go Command = p$TEXT$\n
+Output Format = r$RESPONSE$\n
+[[[NewAE USB (CWLite/CW1200)]]]
+baud = 38400
+[Target Settings]
+[[Smart Card]]
+Reader Hardware = None
+SmartCard Protocol = None
