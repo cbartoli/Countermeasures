@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Jun 20 15:09:17 2018
+# Process ID: 3724
+# Current directory: C:/Users/DPAWS/Documents/CHRIS/Countermeasures/CR_fewerclocks/fpga/vivado_examples/aes128_verilog/aes128_verilog.runs/synth_35t
+# Command line: vivado.exe -log cw305_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cw305_top.tcl
+# Log file: C:/Users/DPAWS/Documents/CHRIS/Countermeasures/CR_fewerclocks/fpga/vivado_examples/aes128_verilog/aes128_verilog.runs/synth_35t/cw305_top.vds
+# Journal file: C:/Users/DPAWS/Documents/CHRIS/Countermeasures/CR_fewerclocks/fpga/vivado_examples/aes128_verilog/aes128_verilog.runs/synth_35t\vivado.jou
+#-----------------------------------------------------------
+source cw305_top.tcl -notrace
